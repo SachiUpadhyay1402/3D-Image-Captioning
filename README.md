@@ -53,20 +53,6 @@ The model handles all 10 ModelNet10 classes:
 
 ---
 
-## Evaluation Metrics
-
-| Metric | Transformer Model | BLIP Baseline |
-|--------|:-----------------:|:-------------:|
-| BLEU | 0.5231 | 0.4952 |
-| METEOR | 0.4617 | 0.4383 |
-| ROUGE-L | 0.6079 | 0.5821 |
-| CIDEr | 1.0824 | 0.9743 |
-| SPICE | 0.2198 | 0.2014 |
-
-The Transformer model with context injection outperforms the BLIP zero-shot baseline across all metrics.
-
----
-
 ## Dependencies
 
 ```bash
