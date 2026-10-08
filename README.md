@@ -1,6 +1,6 @@
 ﻿# 3D Image Captioning
 
-Automatic caption generation for 3D objects using the **ModelNet10** dataset. 3D meshes are rendered into 2D images and passed through a **BLIP** vision-language model to produce natural language descriptions — bridging 3D vision and NLP.
+Automatic caption generation for 3D objects using the ModelNet10 dataset. 3D meshes are rendered into 2D images and passed through a BLIP vision-language model to produce natural language descriptions - bridging 3D vision and NLP.
 
 ---
 
@@ -46,10 +46,10 @@ The model handles all 10 ModelNet10 classes:
 
 ## How It Works
 
-1. **Upload** — Upload `ModelNet10.zip` to Colab via `files.upload()`
-2. **Render** — Each `.off` 3D mesh is rendered into a 640×640 2D image with photorealistic shading and a 45° rotation
-3. **Caption** — The rendered image is passed to BLIP with the object category as context to generate a descriptive sentence
-4. **Evaluate** — Captions are scored against reference descriptions using standard NLP metrics
+1. **Upload** - Upload `ModelNet10.zip` to Colab via `files.upload()`
+2. **Render** - Each `.off` 3D mesh is rendered into a 640×640 2D image with photorealistic shading and a 45° rotation
+3. **Caption** - The rendered image is passed to BLIP with the object category as context to generate a descriptive sentence
+4. **Evaluate** - Captions are scored against reference descriptions using standard NLP metrics
 
 ---
 
@@ -77,28 +77,18 @@ pip install trimesh pillow matplotlib torch torchvision \
 
 ---
 
-## Usage
-
-1. Open `3D Image Captioning.ipynb` in **Google Colab**
-2. Run cells sequentially — upload `ModelNet10.zip` when prompted
-3. Captions are generated per object and saved to `all_results`
-4. Evaluation results are saved to `caption_evaluation_results.csv`
-5. A comparison graph is saved as `3D_Captioning_TechniqueComparison.png`
-
----
-
 ## Output
 
 - **Per-object captions** printed inline
-- **`caption_evaluation_results.csv`** — metric scores table
-- **`3D_Captioning_TechniqueComparison.png`** — line graph comparing Transformer vs BLIP baseline
+- **`caption_evaluation_results.csv`** - metric scores table
+- **`3D_Captioning_TechniqueComparison.png`** - line graph comparing Transformer vs BLIP baseline
 
 ---
 
 ## Tech Stack
 
-- **PyTorch** — model inference
-- **Hugging Face Transformers** — BLIP model
-- **Trimesh** — 3D mesh loading & processing
-- **OpenCV / Matplotlib** — rendering pipeline
-- **Hugging Face Evaluate** — BLEU, METEOR, ROUGE-L, CIDEr, SPICE
+- **PyTorch** - model inference
+- **Hugging Face Transformers** - BLIP model
+- **Trimesh** - 3D mesh loading & processing
+- **OpenCV / Matplotlib** - rendering pipeline
+- **Hugging Face Evaluate** - BLEU, METEOR, ROUGE-L, CIDEr, SPICE
